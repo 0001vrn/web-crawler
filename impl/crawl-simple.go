@@ -11,7 +11,7 @@ import (
 )
 
 func StartCrawlingSimple(seedUrl string) {
-	fmt.Println("using simple implementation")
+	fmt.Println("using simple bfs implementation")
 	level := 0
 	visitedLinks := set.New()
 	q := queue.New()
@@ -43,7 +43,7 @@ func StartCrawlingSimple(seedUrl string) {
 		}
 	}
 
-	fmt.Println(" unique sites count -> ", visitedLinks.Len())
+	fmt.Println("unique sites count -> ", visitedLinks.Len())
 }
 
 func Fetch(url string) (*html.Node, error) {

@@ -8,7 +8,7 @@ import (
 )
 
 func StartCrawlingConcurrent(seedUrl string) {
-	fmt.Println("using concurrent implementation")
+	fmt.Println("using concurrent bfs implementation")
 
 	level := 0
 	q := queue.NewLockfreeQueue[string]()

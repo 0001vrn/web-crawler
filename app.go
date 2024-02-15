@@ -13,26 +13,24 @@ const ConcurrentCrawlingExecutionMode = 1
 func main() {
 	argsWithoutProg := os.Args[1:]
 	var seedUrl = "https://www.wikipedia.org/"
-	fmt.Println(argsWithoutProg)
+
 	if len(argsWithoutProg) != 0 {
 		seedUrl = argsWithoutProg[0]
 	}
 
-	if len(argsWithoutProg) != 0 && len(argsWithoutProg[1]) != 0 {
-		ExecutionMode, err := strconv.Atoi(argsWithoutProg[1])
-		if err != nil {
-			panic(err)
-		}
+	if len(argsWithoutProg) != 2 {
+		fmt.Println("please run the command as : go run app.go https://www.wikipedia.org 1")
+		os.Exit(1)
+	}
 
-		if ExecutionMode == SimpleCrawlingExecutionMode {
-			impl.StartCrawlingSimple(seedUrl)
-		} else if ExecutionMode == ConcurrentCrawlingExecutionMode {
-			impl.StartCrawlingConcurrent(seedUrl)
-		} else {
-			impl.StartCrawlingConcurrent(seedUrl)
-		}
+	ExecutionMode, err := strconv.Atoi(argsWithoutProg[1])
+	if err != nil {
+		os.Exit(1)
+	}
 
-	} else {
+	if ExecutionMode == SimpleCrawlingExecutionMode {
 		impl.StartCrawlingSimple(seedUrl)
+	} else if ExecutionMode == ConcurrentCrawlingExecutionMode {
+		impl.StartCrawlingConcurrent(seedUrl)
 	}
 }
