@@ -1,0 +1,6 @@
+github.com/antigloss/go v1.19.3 h1:7G/qe+EHRugXuAmtJRxWqA+PWXoxIyO2m/DxZFd1sNY=
+github.com/antigloss/go v1.19.3/go.mod h1:WS4gUakRmXdseEQamBMtYNWSbhrp6pispVI+sP5NVBE=
+github.com/golang-collections/collections v0.0.0-20130729185459-604e922904d3 h1:zN2lZNZRflqFyxVaTIU61KNKQ9C0055u9CAfpmqUvo4=
+github.com/golang-collections/collections v0.0.0-20130729185459-604e922904d3/go.mod h1:nPpo7qLxd6XL3hWJG/O60sR8ZKfMCiIoNap5GvD12KU=
+golang.org/x/net v0.20.0 h1:aCL9BSgETF1k+blQaYUBx9hJ9LOGP3gAVemcZlf1Kpo=
+golang.org/x/net v0.20.0/go.mod h1:z8BVo6PvndSri0LbOE3hAn0apkU+1YvI6E70E9jsnvY=
